@@ -1,7 +1,7 @@
 /**
  * Classe Primer amb diferents metodes.
  * 
- * @author Joel Lacambra
+ * @author Jon Jordi Salvado
  *
  */
 import java.math.BigInteger;
@@ -9,7 +9,7 @@ import java.math.BigInteger;
 public class Primer {
 	
 	/**
-	 * Metode per buscar el primer més gran d'un numero especific interpretat com a Long.
+	 * Metode per buscar el primer mÃ©s gran d'un numero especific interpretat com a Long.
 	 * @param valor - numero del qual es buscara el primer mes gran
 	 * @return quan es trobi el primer aquest es retorna com com si fos una String
 	 */
