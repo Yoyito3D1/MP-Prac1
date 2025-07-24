@@ -1,44 +1,40 @@
-🔢 Projecte: Cerca de nombres primers grans
-Aquest projecte en Java té com a objectiu trobar el nombre primer més gran i proper a un valor donat. 📈 Està pensat per gestionar valors molt grans, i utilitza optimitzacions per fer-ho de manera eficient!
+# 🔍 Projecte de Cerca de Nombres Primers Grans
 
-🧠 Funcionalitat principal
-Donats diversos números des d’un fitxer d’entrada (FitEntrada.txt), el programa:
+Aquest projecte en Java permet calcular **el nombre primer més gran menor o igual a un valor donat**, llegint valors des d’un fitxer d’entrada i escrivint els resultats en un fitxer `.csv`.
 
-Determina si ha de tractar el número com a Long o BigInteger.
+---
 
-Cerca el nombre primer més gran i pròxim a aquell valor.
+## 📦 Contingut del projecte
 
-Mesura el temps d’execució de cada cerca.
+🧮 **Classes principals:**
 
-Desa els resultats (valor original, primer trobat i temps) en un fitxer .csv 📝
+- `Primer.java`: Conté els mètodes per detectar si un número és primer i buscar el primer més gran a un valor donat, tant per `long` com per `BigInteger`.
+- `UsaPrimer.java`: Programa principal que llegeix els valors d’un fitxer (`FitEntrada.txt`), aplica la cerca de primers i desa els resultats i el temps emprat en un fitxer de sortida.
 
-🧪 Exemple d’ús
-L’usuari indica quantes línies llegir del fitxer.
+---
 
-Es calcula el primer per a cada línia.
+## 🚀 Com funciona
 
-S’imprimeixen i desen els resultats.
+1. 👤 L'usuari introdueix quantes línies vol llegir del fitxer `FitEntrada.txt` (màxim 15).
+2. 📖 El programa llegeix aquests valors i detecta si han de ser tractats com `long` o com `BigInteger`.
+3. 🔎 Es calcula el **primer més gran** per cada valor.
+4. ⏱️ Es mesura el temps d’execució per a cada càlcul.
+5. 💾 Es genera un fitxer `.csv` amb el resultat:
+   - Valor original
+   - Primer més gran trobat
+   - Temps emprat (en mil·lisegons)
 
-🛠️ Estructura del projecte
-Primer.java → Conté els mètodes per verificar si un nombre és primer i cercar el primer més gran, tant amb long com amb BigInteger.
+---
 
-UsaPrimer.java → Classe principal que llegeix dades, fa càlculs, i escriu els resultats.
+## 📂 Exemple de fitxer `.csv` generat
 
-FitEntrada.txt → Fitxer d’entrada amb valors numèrics.
-
-resultats.csv → Fitxer de sortida amb els resultats.
-
-📊 Exemple de sortida (.csv)
-python-repl
-Copiar
-Editar
-Valor     ; Primer     ; Temps
-982451653 ; 982451653  ; 0.123 ms
-100000000000000000001 ; 99999999999999999989 ; 52.345 ms
+```csv
+Valor; Primer; Temps
+100000000000003; 99999999999989; 3.402 ms
+987654321987654321; 987654321987654319; 12.784 ms
 ...
-🚀 Altres detalls
-🧮 Per a valors molt grans s'utilitza la classe BigInteger.
 
-⏱️ El temps d'execució es calcula amb System.nanoTime().
+🛠️ Requisits
+JDK 8 o superior
 
-📂 Els fitxers d’entrada i sortida es poden personalitzar fàcilment.
+Fitxer FitEntrada.txt amb un màxim de 15 línies numèriques
